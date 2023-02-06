@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>06/22-"YAN""FRI"-</title>
+</head>
+
+<body>
+    <h1>1.Botones con acciones y mensajes:</h1>
+
+    <button>Botón básico(Yatusae)</button>
+
+    <br><br>
+    
+    <button onclick="accion_1()" id="Bt1"> Botón 1 </button><br>
+
+    <button onclick="accion_2()" id="Bt2"> Botón 2 </button><br>
+
+    <button onclick="accion_3()" id="Bt3"> Botón 3 </button><br><br>
+
+    <h1>2.Despliegue de datos</h1>
+
+    <h2>Hola, a continuación solicitaremos algunos datos personales, esperamos nos puedas colaborar con tu información, ¡Gracias! </h2><br>
+    Primer nombre: <input type="text" name="Recibir texto 1" id="Tx_1">
+
+    Segundo nombre: <input type="text" name="Recibir texto 2" id="Tx_2">
+<br>
+    <br>
+    Primer apellido: <input type="text" name="Recibir texto 3" id="Tx_3">
+
+    Segundo apellido: <input type="text" name="Recibir texto 4" id="Tx_4">
+    <br>
+    <br>
+
+    <button onclick="accion_4()"id="Bt4" >Concatenar</button><br><br><br>
+
+    "Nombre:" &nbsp;<output id="Out1"></output> <br> 
+    "Y apellidos:" &nbsp;<output id="Out2"></output> 
+    <style type="text/css">/*Este es un comentario en css*/
+    body{
+        background-image: url(yanfri2.jpg.png);
+        background-repeat:round;
+        color: rgb(0, 0, 0);
+    }
+    h1{color: rgba(86, 11, 88, 0.767);}
+    h2{color: brown;}
+    #Out1{color: rgb(224, 12, 12);}
+    #Out2{color: rgb(61, 4, 63);}
+        
+    </style><!--Esto es css, el estilo. Java script ya es funcionalidad.-->
+    <script type="text/javascript">
+        //Así se hacen comentarios en JavaScript
+        
+        function accion_1() {
+            alert("Boton 1 Hola!!!!!!!!!!!!!")
+        }
+        function accion_2() {
+            confirm("Chao bb UwU")
+        }
+        function accion_3() {
+            alert("Esto es una alerta del boton 3");
+            confirm("Confirmación? ja ja aj")
+        }
+        function accion_4() {
+            var NombreCompleto= document.getElementById("Tx_1").value+" "+
+									document.getElementById("Tx_2").value+" "+
+									document.getElementById("Tx_3").value+" "+
+									document.getElementById("Tx_4").value
+
+				var Nombres= document.getElementById("Tx_1").value+" "+document.getElementById("Tx_2").value
+
+				var Apellidos= document.getElementById("Tx_3").value+" "+document.getElementById("Tx_4").value
+
+				alert(NombreCompleto)
+				document.getElementById("Out1").innerHTML=Nombres
+				document.getElementById("Out2").innerHTML=Apellidos
+        }
+
+    </script>
+</body>
+</html>
